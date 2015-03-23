@@ -6,7 +6,7 @@ sidebars and other irrelevant stuff.
 ## Install
 
 ```
-git clone ...
+git clone git@github.com:js-lessons/read-later-server.git
 cd read-later-server
 npm install
 npm start
