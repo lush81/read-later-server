@@ -20,18 +20,18 @@ npm test
 
 ## Read Later API URIs
 
-**[GET] /scraper?url=<url>**
+**[GET] /scraper?url=&lt;url&gt;**
 
-Submit a GET request to fetch the content from the provided <url>. This will return a json object with the following fields:
+Submit a GET request to fetch the content from the provided &lt;url&gt;. This will return a json object with the following fields:
 
 * content
 * url
 * title
 
-**[GET] /scraper?url=<url>&callback=<callback>**
+**[GET] /scraper?url=&lt;url&gt;&callback=&lt;callback&gt;**
 
-It supports jsonp protocol. Returns json wrapped in <callback>
+It supports jsonp protocol. Returns json wrapped in &lt;callback&gt;
 
-**[POST] /scraper** [url: <url>]
+**[POST] /scraper** [url: &lt;url&gt;]
 
 Submit a POST request to save data to Firebase.
