@@ -1,0 +1,29 @@
+{
+  "name": "web-peek",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "start": "node ./bin/www",
+    "test": "./node_modules/.bin/mocha spec"
+  },
+  "dependencies": {
+    "body-parser": "~1.0.0",
+    "cookie-parser": "~1.0.1",
+    "cors": "^2.5.3",
+    "debug": "~0.7.4",
+    "express": "^4.4.5",
+    "firebase": "^2.2.2",
+    "morgan": "~1.0.0",
+    "node-readability": "^1.0.1",
+    "sanitizer": "^0.1.1",
+    "static-favicon": "~1.0.0"
+  },
+  "devDependencies": {
+    "chai": "^2.1.2",
+    "hippie": "^0.3.0",
+    "mocha": "^2.2.1",
+    "mockfirebase": "^0.10.3",
+    "nock": "^1.2.0",
+    "proxyquire": "^1.4.0"
+  }
+}
