@@ -4,8 +4,8 @@ var Firebase = require('firebase');
 require('jquery');
 var http = require('http');
 var myDataRef = new Firebase('https://final-project-lush.firebaseio.com/');
-var read = require('node-readability');//для вытягивания title и content
-var bodyParser = require('body-parser');
+var read = require('node-readability');//для вытягивания title и content (http://expressjs.com/4x/api.html)
+var bodyParser = require('body-parser');//для вытятыгивания req.body
 var cors = require('cors');//для приемки запросов от всех доменов, если cors() - без параметров
                            // и для только определенных доменов если cors(option), где в  option задаются нужные домены
 
