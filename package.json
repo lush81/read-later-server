@@ -16,7 +16,8 @@
     "morgan": "~1.0.0",
     "node-readability": "^1.0.1",
     "sanitizer": "^0.1.1",
-    "static-favicon": "~1.0.0"
+    "static-favicon": "~1.0.0",
+    "jquery": "1.11.2"
   },
   "devDependencies": {
     "chai": "^2.1.2",
