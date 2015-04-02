@@ -11,6 +11,10 @@ app.use(bodyParser());
 var cors = require('cors');
 app.use(cors());
 
+app.get('/', function (req, res) {
+  res.send('Hello, World!')
+})
+
 app.get('/scraper', function(req, res) {
   var url = req.query.url;
   read(url, function(err, article, meta) { 
