@@ -18,11 +18,15 @@ app.get('/', function (req, res) {
 app.get('/scraper', function(req, res) {
   var url = req.query.url;
   read(url, function(err, article, meta) { 
-    res.status(200).jsonp({
-      url: url,
-      title: article.title,
-      content: article.content
-    })
+    if (article) {
+      res.status(200).jsonp({
+        url: url,
+        title: article.title,
+        content: article.content
+      })
+    } else {
+      res.sendStatus(400)
+    }
   })
 });
 
@@ -32,13 +36,16 @@ app.post('/scraper', cors(), function (req, res) {
       return res.sendStatus(400);
     } 
   read(url, function(err, article, meta) {
-    fb.child("articles").push({
-      url: url,
-      title: article.title,
-      content: article.content
-    });
-  res.sendStatus(res.statusCode);                                       
-  })
+    if (article) {
+        fb.child("articles").push({
+        url: url,
+        title: article.title,
+        content: article.content
+      });
+      res.sendStatus(res.statusCode);
+    } else {
+      res.sendStatus(500);
+    }
+  });
 });
-
 module.exports = app;
