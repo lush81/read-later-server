@@ -40,7 +40,8 @@ app.post('/scraper', cors(), function (req, res) {
         fb.child("articles").push({
         url: url,
         title: article.title,
-        content: article.content
+        content: article.content,
+        read: false
       });
       res.sendStatus(res.statusCode);
     } else {
