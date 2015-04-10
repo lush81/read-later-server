@@ -36,7 +36,7 @@ app.post('/scraper', cors(), function (req, res) {
       return res.sendStatus(400);
     } 
   read(url, function(err, article, meta) {
-    if (article) {
+    if (article&&article.title) {
         fb.child("articles").push({
         url: url,
         title: article.title,
